@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+.panel {
+    flex: 1;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s, flex 0.3s;
+    position: relative;
+}
+
+.panel img {
+    width: 100%;
+    height: auto;
+    
+    display: block;
+}
+
+.panel h3 {
+
+    bottom: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel:not(.active) {
+    flex: 1;
+}
+
+.panel:hover {
+    transform: scale(1.05);
+}
